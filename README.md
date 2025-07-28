@@ -13,7 +13,7 @@ The steps for setting up and running this bot are these:
 
 ## Setting up Zanod
 
-Install p7zip to extraxt the AppImage
+Install p7zip to extract the AppImage
 
 ```bash
 sudo apt-get install p7zip-full p7zip-rar
@@ -22,6 +22,7 @@ sudo apt-get install p7zip-full p7zip-rar
 ```bash
 sudo su
 mkdir /opt/zano-2-1-7-411
+mkdir /opt/zano-bin
 cd /opt/zano-2-1-7-411
 wget "https://build.zano.org/builds/zano-linux-x64-release-v2.1.7.411[29d02c1].AppImage"
 mv zano-linux-x64-release-v2.1.7.411\[29d02c1\].AppImage zano-linux-x64-release-v2.1.7.411\[29d02c1\].7z
@@ -44,7 +45,7 @@ cp zanod.service /etc/systemd/system/zanod.service
 systemctl enable zanod
 systemctl start zanod
 ```
-Make sure that the ZANO blockchain is synced before trying to start the bot. The bot will not run unless iot's fully synced!
+Make sure that the ZANO blockchain is synced before trying to start the bot. The bot will not run unless it's fully synced!
 ## Setting up simplewallet
 
 ```bash
@@ -69,7 +70,7 @@ systemctl start zanowallet
 ## Install MariaDB
 
 ```bash
-apt-get install mariadb-server
+apt-get install mariadb-server mariadb-client
 sudo mysql
 CREATE DATABASE marketmaker DEFAULT CHARACTER SET utf8;
 CREATE USER 'marketmaker'@'localhost' IDENTIFIED by 'YOUR_PASSWORD_HERE';
