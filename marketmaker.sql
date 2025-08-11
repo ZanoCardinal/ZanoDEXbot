@@ -346,4 +346,17 @@ CREATE TABLE `zano_wallets` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-05 19:38:36
+CREATE TABLE `audit_wallet_transfers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `requester` varchar(256) DEFAULT NULL,
+  `comment` varchar(256) DEFAULT NULL,
+  `error` varchar(256) DEFAULT NULL,
+  `txid` varchar(256) DEFAULT NULL,
+  `address` varchar(256) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  `timestamp` timestamp NULL DEFAULT NULL,
+  `amount` decimal(32,12) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `audit_wallet_transfers_status_index` (`status`),
+  KEY `audit_wallet_transfers_txid_index` (`txid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci
