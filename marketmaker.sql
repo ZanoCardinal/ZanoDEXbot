@@ -359,4 +359,4 @@ CREATE TABLE `audit_wallet_transfers` (
   PRIMARY KEY (`id`),
   KEY `audit_wallet_transfers_status_index` (`status`),
   KEY `audit_wallet_transfers_txid_index` (`txid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
